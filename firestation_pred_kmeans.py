@@ -7,7 +7,11 @@ import numpy as np
 import pandas as pd
 
 # %%
+<<<<<<< HEAD
 df_2= pd.read_csv('./dataSet/df_2_real_last.csv',encoding='EUC-KR')
+=======
+df_2= pd.read_csv('./df_2_real_last.csv',encoding='EUC-KR')
+>>>>>>> 54cddba04422efcb93e81bbe9af9732a1d7078e9
 dictionary_2 = pd.read_csv('./dictionary_2.csv', encoding = 'EUC-KR')
 # %%
 df = df_2.drop(labels = ['Unnamed: 0'], axis = 1)
@@ -90,7 +94,11 @@ length = []
 for j in tqdm(range(len(kmeans.labels_))):
     for i in range(len(kmeans.cluster_centers_)):
         if i == kmeans.labels_[j]:
+<<<<<<< HEAD
             count_dict_2['count_'+str(i)] += 1              /
+=======
+            count_dict_2['count_'+str(i)] += 1
+>>>>>>> 54cddba04422efcb93e81bbe9af9732a1d7078e9
             cal = calculate_distance(loc_info_lat[i], loc_info_long[i], fire_station_locations[i, 0], fire_station_locations[i, 1])
             distance_dict_2['distance_'+str(i)] += cal
             count_dict_3['count_'+str(i)] += 1
@@ -102,3 +110,10 @@ for j in tqdm(range(len(kmeans.labels_))):
 #%% 군집화를 통한 생성한 위치와 사고발생 위치 거리가 약 5.6% 감소함
 sum(length)/len(length)
 # %%
+<<<<<<< HEAD
+=======
+A,B
+# %%
+kmeans.cluster_centers_
+# %%
+>>>>>>> 54cddba04422efcb93e81bbe9af9732a1d7078e9
